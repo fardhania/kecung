@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_fardhania_kecung_1727086736414-push-trigger-input-set
+  identifier: Build_fardhania_kecung_1727086736414pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_fardhania_kecung_1727086736414
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
